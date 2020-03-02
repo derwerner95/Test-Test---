@@ -1,0 +1,19 @@
+{
+  "testsuite_id": 1337,
+  "testrun_args" : [
+    {
+      "test_id": 6
+    }
+  ],
+  "repo_args" : {
+    "url": "https://git.perfact.de/DebianPackages/pfpyroutinecheck",
+    "install_cmds": [
+      "python2 -m virtualenv venv",
+      "venv/bin/python -m pip install -r requirements.txt"
+    ],
+    "env": {"PATH": "venv/bin"},
+    "run_cmd": "venv/bin/python -m unittest discover",
+    "rebuild": true,
+    "branch": "devel"
+  }
+}

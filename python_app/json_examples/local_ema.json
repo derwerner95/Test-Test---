@@ -1,0 +1,18 @@
+{
+  "testsuite_id": 42,
+  "testrun_args" : [
+    {
+      "test_id": 13,
+      "path": "tests/basic/test_login.py",
+      "url": "https://192.168.178.34/",
+      "browser": "firefox"
+    }
+  ],
+  "repo_args" : {
+    "url": "https://git.perfact.de/DB-Utils/dbutils-apptest",
+    "install_cmds": ["bash build_env.sh auto"],
+    "env": {"PATH": "venv2/bin"},
+    "run_cmd": "start_test -b {browser} -n {url} -p {path}",
+    "rebuild": true
+  }
+}

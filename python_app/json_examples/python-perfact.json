@@ -1,0 +1,18 @@
+{
+  "testsuite_id": 47,
+  "testrun_args" : [
+    {
+      "test_id": 11
+    }
+  ],
+  "repo_args" : {
+    "url": "https://git.perfact.de/DebianPackages/python-perfact",
+    "install_cmds": [
+      "virtualenv -p python2 venv2",
+      "venv2/bin/python setup.py install"
+    ],
+    "env": {"PATH": "venv2/bin"},
+    "run_cmd": "venv2/bin/python -m unittest discover",
+    "rebuild": true
+  }
+}
